@@ -1,0 +1,157 @@
+.about-section {
+  padding-top: 65px;
+  padding-bottom: 200px;
+  background-color: #fff;
+  .sections {
+    display: flex;
+    .left-section {
+      flex: 2;
+      h3 {
+        color: #000;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 47px;
+        margin-top: 85px;
+      }
+      p {
+        color: #555;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        margin-top: 30px;
+      }
+      .learn-navigation {
+        margin-top: 50px;
+        display: flex;
+        gap: 100px;
+        .learn-more {
+          background: linear-gradient(0deg, #000 0%, #000 100%), #FFF;
+          color: #FFF;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 19px;
+          padding: 15px 30px;
+          border-radius: 30px;
+          box-sizing: border-box;
+          &:hover {
+            cursor: pointer;
+            background: linear-gradient(0deg, #fff 0%, #fff 100%), #000;
+            outline: 1px solid #000;
+            color: #000;
+          }
+        }
+        .navigation {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          .left-arrow {
+            transform: rotate(180deg);
+            cursor: pointer;
+            &.disabled {
+              opacity: 0.3;
+              cursor: default;
+            }
+          }
+          .right-arrow {
+            cursor: pointer;
+            &.disabled {
+              opacity: 0.3;
+              cursor: default;
+            }
+          }
+        }
+      }
+    }
+    .right-section {
+      flex: 3;
+      .cards {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 580px;
+        gap: 30px;
+        .card {
+          position: relative;
+          height: 100%;
+          border-radius: 20px;
+          .overlay {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            border-radius: 20px;
+            background: linear-gradient(180deg, rgba(210, 207, 210, 0.00) 0%, rgba(0, 0, 0, 0.49) 81.55%);
+            z-index: 1;
+          }
+          .image {
+            position: relative;
+            width: 130px;
+            height: 100%;
+            border-radius: 20px;
+            transition: width 0.3s ease-in-out;
+            transition-delay: 0.2s;
+            &.selected {
+              width: 380px;
+            }
+            img {
+              position: absolute;
+              height: 100%;
+              top: 0;
+              border-radius: 20px;
+              transition:all 0.5s ease;
+              &.clip {
+                object-fit: cover;
+                object-position: 91% 100%;
+                &.clip-2 {
+                  object-position: 58% 100%;
+                }
+                &.clip-3 {
+                  object-position: 35% 100%;
+                }
+              }
+              &.selected {
+                object-fit: cover;
+                object-position: 75% 100%;
+              }
+            }
+          }
+          .title-wrapper {
+            position: absolute;
+            bottom: 40px;
+            z-index: 1;
+            transform: rotate(-90deg);
+            padding-top: 0;
+            padding-left: 0;
+            &.selected {
+              transform: rotate(0deg);
+              padding-top: 0;
+              padding-left: 0;
+              .text-background {
+                height: 130px;
+
+              }
+            }
+            .text-background {
+              height: 130px;
+              width: 130px;
+              background: #1E1E2F;
+              overflow: visible;
+              .title {
+                color: #FFF;
+                font-size: 42px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+                white-space: nowrap;
+                padding-left: 47px;
+                padding-top: 38px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.navbar {
+  height: 80px;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  z-index: 9;
+  position: relative;
+  .section-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .left-section {
+      flex: 2;
+    }
+    .right-section {
+      flex: 3;
+      .navbar-links {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .link {
+          color: #000;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}

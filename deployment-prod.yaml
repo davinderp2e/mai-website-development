@@ -1,0 +1,69 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: prod
+  name: mai-website-prod-deployment
+  labels:
+    app: mai-website-prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mai-website-prod
+  template:
+    metadata:
+      labels:
+        app: mai-website-prod
+    spec:
+      hostname: mai-website-prod
+      containers:
+        - name: mai-website-prod
+          image: 408153089286.dkr.ecr.ap-south-1.amazonaws.com/mai-website-dev:<VERSION>
+          imagePullPolicy: IfNotPresent
+          resources:
+            requests:
+              memory: '1024Mi'
+              cpu: '500m'
+            limits:
+              memory: '2048Mi'
+              cpu: '750m'
+          # readinessProbe:
+          #     httpGet:
+          #       path: /v1/health
+          #       port: 4000
+          #     initialDelaySeconds: 60
+          #     timeoutSeconds: 10
+          # livenessProbe:
+          #     httpGet:
+          #       path: /v1/health
+          #       port: 4000
+          #     initialDelaySeconds: 60
+          #     periodSeconds: 5
+          #     timeoutSeconds: 10
+          #     failureThreshold: 4                                             
+            ports:
+              - name: http
+                containerPort: 3000
+                protocol: TCP
+          # env:
+          #   - name: GOOGLE_CLIENT_ID
+          #     valueFrom:
+          #       secretKeyRef:
+          #         key: GOOGLE_CLIENT_ID
+          #         name: prod-mai-website
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: prod
+  name: mai-website-prod-svc
+  labels:
+    svc: mai-website-prod
+spec:
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3000
+  selector:
+    app: mai-website-prod

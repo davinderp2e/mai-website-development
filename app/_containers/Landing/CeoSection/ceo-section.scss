@@ -1,0 +1,61 @@
+.ceo-section {
+  position: relative;
+  .sections {
+    display: flex;
+    align-items: center;
+    height: 630px;
+    .left-section {
+      flex: 1;
+      .ceo-speaks {
+        color: #555;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px;
+      }
+      .heading {
+        color: #000;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 48px;
+        margin-top: 10px;
+      }
+      .description {
+        color: #555;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 27px;
+        margin-top: 50px;
+      }
+      .view-team {
+        background: linear-gradient(0deg, #000 0%, #000 100%), #FFF;
+        color: #FFF;
+        width: max-content;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 19px;
+        padding: 15px 30px;
+        border-radius: 30px;
+        box-sizing: border-box;
+        margin-top: 40px;
+        &:hover {
+          background: #fff;
+          color: #000;
+          cursor: pointer;
+          outline: 1px solid #000;
+        }
+      }
+    }
+    .right-section {
+      flex: 1;
+      img {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}

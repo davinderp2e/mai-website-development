@@ -1,0 +1,73 @@
+.statistics-section {
+  z-index: 2;
+  border-radius: 10px;
+
+  .absolute-wrapper {
+    width: 100%;
+    position: relative;
+    border-radius: 10px;
+  }
+  .banner {
+    width: 100%;
+    min-height: 180px;
+    background-image: url("../../../../public/images/statistics-bg.png");
+    border-radius: 10px;
+    position: absolute;
+    z-index: 2;
+    top: -120px;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(3608.94% 256.09% at 81.02% -78.53%, #457AAA 57.44%, #874C94 100%, #825096 100%);;
+      opacity: 0.9;
+      border-radius: 10px;
+    }
+
+    .items {
+      z-index: 2;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 35px;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-right: 1px solid;
+        border-color: rgba(255, 255, 255, 0.40);
+        &:last-child {
+          border-right: none;
+        }
+
+        .count {
+          color: #FFF;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 31px;
+        }
+
+        .text {
+          color: #FFF;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 31px;
+          margin-top: 25px;
+          width: 75%;
+        }
+      }
+      .divider {
+        width: 1px;
+        height: 100px;
+        background-color: #fff;
+      }
+    }
+  }
+}
