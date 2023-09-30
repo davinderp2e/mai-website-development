@@ -1,5 +1,6 @@
 'use client'
 
+import React from 'react';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Banner1 from 'public/images/banner1.svg';

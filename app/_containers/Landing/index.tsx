@@ -1,3 +1,4 @@
+import React from 'react';
 import './landing.scss';
 import Navbar from './Navbar';
 import BannerSection from './BannerSection';
