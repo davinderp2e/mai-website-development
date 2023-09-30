@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Arrow } from 'app/_assets/svg';
+import { Arrow } from '../../../_assets/svg';
 import Cards from './cards';
 import './about-section.scss';
 
