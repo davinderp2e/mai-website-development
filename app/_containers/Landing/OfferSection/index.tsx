@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Payment from 'public/images/payment.png';
 import Marketplace from 'public/images/marketplace.png';
 import Sovereign from 'public/images/soverign.png';
-import { Arrow } from 'app/_assets/svg';
+import { Arrow } from '../../../_assets/svg';
 import './offer-section.scss';
 
 const offers = [
@@ -31,6 +31,8 @@ const offers = [
 ];
 
 const OfferSection = () => {
+  let Arrow:any;
+
   return (
     <div className="offer-section">
       <div className="container">

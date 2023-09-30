@@ -8,7 +8,7 @@ import Blog3 from 'public/images/blog-3.png';
 import CaseStudy1 from 'public/images/case-study-1.png';
 import CaseStudy2 from 'public/images/case-study-2.png';
 import CaseStudy3 from 'public/images/case-study-3.png';
-import { Arrow } from 'app/_assets/svg';
+import { Arrow } from '../../../_assets/svg';
 import './articles-section.scss';
 
 const blogs = [
@@ -91,6 +91,8 @@ const types = [
 
 const ArticlesSection = () => {
   const [selectedArticle, setSelectedArticle] = useState(3);
+
+  let Arrow:any;
 
   const onClick = (id: number) => () => {
     setSelectedArticle(id);
