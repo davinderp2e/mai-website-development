@@ -24,7 +24,7 @@ const BannerSection = () => {
     return () => clearInterval(interval);
   });
 
-  const onBannerChange = (id) => () => {
+  const onBannerChange = (id: any) => () => {
     if (id === 0) {
       setBannerText('digital universe');
       setBannerImage(0);
