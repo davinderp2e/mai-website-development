@@ -9,6 +9,8 @@ import './about-section.scss';
 const AboutSection = () => {
   const [selectedImage, setSelectedImage] = useState<number>(1);
 
+  let Arrow:any;
+
   const onClick = (id: number) => () => {
     setSelectedImage(id);
   };
